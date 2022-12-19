@@ -14,4 +14,4 @@ def calc_retirement(savings, annual_expense, inflation_tax_adjusted_return):
 
 num_years, savings = calc_retirement(savings,annual_expense,annual_return_after_taxes_and_inflation)
 print("Number of years left: "+ str(num_years))
-print("Savings remaining: "+str(savings))
+print("Savings left after "+str(num_years)+" years is: "+str(savings))
