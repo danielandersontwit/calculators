@@ -1,3 +1,9 @@
+savings = 500000
+annual_expense = 30000
+#.04 would be equivalent to a 4% return, .08 would equal an 8% return etc
+annual_return_after_taxes_and_inflation = .04 
+
+
 def calc_retirement(savings, annual_expense, inflation_tax_adjusted_return):
     num_years = 0
     while savings > annual_expense:
@@ -6,6 +12,6 @@ def calc_retirement(savings, annual_expense, inflation_tax_adjusted_return):
         num_years += 1
     return num_years, savings
 
-num_years, savings = calc_retirement(500000,30000,.04)
+num_years, savings = calc_retirement(savings,annual_expense,annual_return_after_taxes_and_inflation)
 print("Number of years left: "+ str(num_years))
 print("Savings remaining: "+str(savings))
