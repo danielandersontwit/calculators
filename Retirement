@@ -1,0 +1,11 @@
+def calc_retirement(savings, annual_expense, inflation_tax_adjusted_return):
+    num_years = 0
+    while savings > annual_expense:
+        savings *= (1+inflation_tax_adjusted_return)
+        savings -= annual_expense
+        num_years += 1
+    return num_years, savings
+
+num_years, savings = calc_retirement(500,30,.04)
+print(num_years)
+print(savings)
